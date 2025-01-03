@@ -1,3 +1,11 @@
+---
+import '@fontsource-variable/rubik';
+import '@fontsource-variable/fira-code';
+import '@fontsource-variable/source-code-pro';
+import '@fontsource-variable/inter';
+import '@fontsource-variable/cinzel';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,14 +13,14 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>Fernando Chiesa Portfolio</title>
 	</head>
-	<body>
+	<body class="bg-oxford_blue-dark text-cool_gray min-h-screen max-w-screen font-inter">
 		<slot />
 	</body>
 </html>
 
-<style>
+<style is:global>
 	html,
 	body {
 		margin: 0;
