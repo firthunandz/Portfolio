@@ -8,5 +8,6 @@ const LIVE_URL = 'https://firthunandz.github.io';
 // https://astro.build/config
 export default defineConfig({
   site: LIVE_URL,
+  base: '/Portfolio/',
   integrations: [tailwind()],
 });
