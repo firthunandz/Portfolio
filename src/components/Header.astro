@@ -4,44 +4,60 @@ import InstagramIcon from './icons/Instagram.astro';
 import XIcon from './icons/X.astro';
 import YoutubeIcon from './icons/Youtube.astro';
 import TwitchIcon from './icons/Twitch.astro';
+import GitHubIcon from './icons/GitHub.astro';
 
 ---
 
-<header class="flex flex-col py-4 px-5 gap-y-2 sm:py-6 sm:px-7 md:py-9 md:px-10 md:gap-y-4">
-  <h1 class="text-3xl font-bold sm:text-4xl md:text-5xl">Fernando Chiesa</h1>
-  <h3 class="text-xl font-medium font-scp md:text-2xl">Desarrollador front end</h3>
-  <h4 class="md:text-lg">Enfocado en el desarrollo web con React y Astro.</h4>
+<header class="flex flex-col py-5 px-6 gap-y-2 sm:py-6 sm:px-8 md:py-10 md:px-12 md:gap-y-4
+lg:grid lg:grid-cols-2 lg:py-12 lg:px-20">
+  <h1 class="text-3xl font-bold sm:text-4xl md:text-5xl lg:col-start-1 lg:col-end-2 lg:row-start-1">Fernando Chiesa</h1>
+  <h3 class="text-xl font-medium font-scp md:text-2xl lg:col-start-1 lg:col-end-2 lg:row-start-2">Desarrollador front end</h3>
+  <h4 class="md:text-lg lg:col-start-1 lg:col-end-2 lg:row-start-3">Enfocado en el desarrollo web con React y Astro.</h4>
   
-  <nav class="hidden lg:block">
-    <ul>
-      <li>
-        Sobre mi
+  <nav class="hidden lg:inline-block lg:col-start-1 lg:col-end-3 lg:row-start-4">
+    <ul class="mt-6 lg:flex lg:justify-around">
+      <li class="uppercase">
+        <a href="#about-me">Sobre mi</a>
       </li>
-      <li>
-        Estudios
+      <li class="uppercase">
+        <a href="#education">Estudios</a>
       </li>
-      <li>
-        Proyectos
+      <li class="uppercase">
+        <a href="#projects">Proyectos</a>
       </li>
     </ul>
   </nav>
 
-  <ul class="flex gap-x-2 mt-3 sm:gap-x-5 md:gap-x-6">
+  <ul class="flex gap-x-2 mt-3 sm:gap-x-5 md:gap-x-6 lg:mt-0 lg:col-start-2 lg:col-end-3 lg:row-start-1 lg:row-end-3 lg:justify-self-end lg:items-center">
     <li>
-      
-      <LinkedInIcon class="size-8 md:size-10"/>
+      <a href="https://www.linkedin.com/in/fernando-chiesa/">
+        <LinkedInIcon class="size-8 md:size-10"/>
+      </a>
     </li>
     <li>
-      <InstagramIcon class="size-8 md:size-10"/>
+      <a href="https://github.com/firthunandz">
+        <GitHubIcon class="size-8 md:size-10"/>
+      </a>
     </li>
     <li>
-      <XIcon class="size-8 md:size-10"/>
+      <a href="https://www.instagram.com/firthunandz/">
+        <InstagramIcon class="size-8 md:size-10"/>
+      </a>
     </li>
     <li>
-      <YoutubeIcon class="size-8 md:size-10"/>
+      <a href="https://x.com/firthunandz92">
+        <XIcon class="size-8 md:size-10"/>
+      </a>
     </li>
     <li>
-      <TwitchIcon class="size-8 md:size-10"/>
+      <a href="https://www.youtube.com/@firthunandz">
+        <YoutubeIcon class="size-8 md:size-10"/>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.twitch.tv/firthunandz">
+        <TwitchIcon class="size-8 md:size-10"/>
+      </a>
     </li>
   </ul>
 </header>

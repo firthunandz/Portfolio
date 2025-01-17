@@ -1,0 +1,28 @@
+---
+import ProjectsData from '../data/Projects.js';
+---
+
+{
+  ProjectsData.map(({title, description, tags, github}) => (
+    <article class="flex flex-col gap-y-2">
+      <div class="flex gap-x-6">
+        <h3 class="text-lg cursor-pointer items-center pl-4 md:text-lg lg:text-xl">{title}</h3>
+        <a href={github} class="text-xs font-semibold px-2 py-1 rounded bg-gray-700 text-blue-400 border border-blue-400 h-fit">GitHub</a>
+      </div>
+      <p>{description}</p>
+      <ul class="flex flex-wrap gap-x-2 gap-y-2 mb-6">
+        {tags.map(tag => (
+          <li>
+            <span class={`flex gap-x-1 items-center text-xs rounded-full text-s ${tag.class} py-1 px-2`}>
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+    </article>
+  ))
+}
+
+<!-- <div class="flex gap-x-4 pl-6">
+  <a href="#" class="text-xs font-semibold px-2 py-0.5 rounded bg-gray-700 text-blue-400 border border-blue-400 inline-block w-fit">Web</a>
+</div> -->
