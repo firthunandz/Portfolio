@@ -26,7 +26,7 @@ const projects = [
     tags: [tags.HTML, tags.CSS, tags.JavaScript]
   },
   {
-    title: 'Codo a codo final project',
+    title: 'Funko-POP e-commerce',
     github: 'https://github.com/firthunandz/CaC-finalProyect',
     description: 'Proyecto final para el bootcamp Codo a codo',
     tags: [tags.HTML, tags.CSS, tags.JavaScript, tags.NodeJS, tags.Express, tags.EJS, tags.MySQL, tags.Sequelize]

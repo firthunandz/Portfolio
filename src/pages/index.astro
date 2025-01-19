@@ -6,21 +6,29 @@ import EducationData from '../data/Education.js';
 import ProjectsDiv from '../components/ProjectsDiv.astro';
 import SectionDiv from '../components/SectionDiv.astro';
 import SectionTitle from '../components/SectionTitle.astro';
+import Divider from '../components/Divider.astro';
 ---
 
 <Layout>
 	<Header />
+	<hr class="mt-6 mb-8 h-0.5 border-t-0 bg-transparent bg-gradient-to-r from-transparent via-rose to-transparent opacity-60" />
 	<main class="pb-8 px-6 flex flex-col sm:px-8 md:px-16 lg:px-32">
-		<SectionDiv id="about-me" class="flex flex-col gap-y-2">
+		<SectionDiv id="about-me" class="flex flex-col gap-y-2 lg:gap-y-4">
 			<SectionTitle sectionTitle="Sobre mi" />
-					<p>Soy un desarrollador front-end autodidacta y emprendedor con más de 3 cursos realizados. En 2020, fundé Fer-mentos, un emprendimiento personal en el cual me encargo de producir, promocionar y vender alimentos fermentados, vinagres, conservas y bebidas.</p>
-					<p>Mi interés por la programación me llevó a desarrollar la página web de mi emprendimiento, inicialmente en HTML, CSS y JavaScript, y actualmente en proceso de migración a React para mejorar su funcionalidad y experiencia de usuario. También cuento con experiencia en Node.js, Express y bases de datos relacionales utilizando SQL y Sequelize.</p>
-					<p>Estoy entusiasmado por el aprendizaje constante y la mejora continua, siempre buscando nuevas herramientas y técnicas para ofrecer soluciones prácticas y efectivas. Soy responsable y dedicado y busco conectar con profesionales y empresas que valoren el compromiso y la dedicación, y que ofrezcan oportunidades para un crecimiento mutuo.</p>
+			<div class="flex flex-col sm:grid sm:grid-cols-2 sm:gap-y-4 ">
+				<img src="./images/profilepic.jpg" alt="Tu imagen" class="h-72 w-56 rounded-xl mb-2 self-center sm:place-self-center md:row-span-2 md:col-start-1" />
+				
+				<p class="indent-6 sm:self-center md:col-start-2">Soy un desarrollador front-end autodidacta y emprendedor con más de 3 cursos realizados. En 2020, fundé Fer-mentos, un emprendimiento personal en el cual me encargo de producir, promocionar y vender alimentos fermentados, vinagres, conservas y bebidas.</p>
+				<p class="indent-6 sm:col-span-2 sm:row-start-2 md:col-span-1 md:col-start-2">Mi interés por la programación me llevó a desarrollar la página web de mi emprendimiento, inicialmente en HTML, CSS y JavaScript, y actualmente en proceso de migración a React para mejorar su funcionalidad y experiencia de usuario. También cuento con experiencia en Node.js, Express y bases de datos relacionales utilizando SQL y Sequelize.</p>
+				<p class="indent-6 sm:col-span-2 sm:row-start-3">Estoy entusiasmado por el aprendizaje constante y la mejora continua, siempre buscando nuevas herramientas y técnicas para ofrecer soluciones prácticas y efectivas. Soy responsable y dedicado y busco conectar con profesionales y empresas que valoren el compromiso y la dedicación, y que ofrezcan oportunidades para un crecimiento mutuo.</p>
+			</div>
 		</SectionDiv>
+
+		<Divider />
 
 		<SectionDiv id="education">
 			<SectionTitle sectionTitle="Estudios" />
-				<ol class="relative border-s border-gray-200 dark:border-gray-700">
+				<ol class="relative border-s border-palatinate_blue">
 					{ EducationData.map(course => (
 						<li class="mb-10 ms-4">
 						<EducationDiv {... course} />
@@ -29,9 +37,13 @@ import SectionTitle from '../components/SectionTitle.astro';
 			</ol>
 		</SectionDiv>
 
-		<SectionDiv id="projects" class="flex flex-col gap-y-2">
+		<Divider />
+
+		<SectionDiv id="projects" class="flex flex-col gap-y-4">
 			<SectionTitle sectionTitle="Proyectos" />
-			<ProjectsDiv />
+			<section class="grid grid-cols-1 gap-y-4 place-items-center md:grid-cols-2 md:gap-4">
+				<ProjectsDiv />
+			</section>
 		</SectionDiv>
 	</main>
 </Layout>

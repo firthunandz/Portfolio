@@ -28,11 +28,10 @@ export default {
           'cool_gray': '#979dac',
 		    },
       fontFamily: {
-        'rubik': 'rubik',
         'fira-code': 'Fira Code Variable',
         'scp': 'Source Code Pro Variable',
         'inter': 'Inter Variable',
-        'cinzel': 'Cinzel Variable',
+        'lato': 'Lato',
       },
     },
 	plugins: [

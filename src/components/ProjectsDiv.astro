@@ -4,21 +4,24 @@ import ProjectsData from '../data/Projects.js';
 
 {
   ProjectsData.map(({title, description, tags, github}) => (
-    <article class="flex flex-col gap-y-2">
-      <div class="flex gap-x-6">
-        <h3 class="text-lg cursor-pointer items-center pl-4 md:text-lg lg:text-xl">{title}</h3>
-        <a href={github} class="text-xs font-semibold px-2 py-1 rounded bg-gray-700 text-blue-400 border border-blue-400 h-fit">GitHub</a>
+    <article class="relative flex flex-col gap-y-2 max-w-[300px] h-[300px] max-h-[300px] lg:max-w-sm border rounded-lg shadow bg-russian_violet/30 border-grape/50 hover:bg-russian_violet/50">
+      <a href={github} class="absolute top-2 right-2 text-xs font-semibold px-2 py-1 rounded bg-gray-700 text-neon_blue border border-neon_blue h-fit">GitHub</a>
+      <div class="flex flex-col items-center gap-y-2">
+        <img class="rounded-t-lg" src="https://placehold.co/384x150" alt="" />
+        <h3 class="text-electric_indigo text-lg cursor-pointer items-center lg:text-xl">{title}</h3>
       </div>
-      <p>{description}</p>
-      <ul class="flex flex-wrap gap-x-2 gap-y-2 mb-6">
-        {tags.map(tag => (
-          <li>
-            <span class={`flex gap-x-1 items-center text-xs rounded-full text-s ${tag.class} py-1 px-2`}>
-              {tag.name}
-            </span>
-          </li>
-        ))}
-      </ul>
+      <div class="flex flex-col flex-1 justify-around gap-y-2 px-4">
+        <p class="text-sm md:text-base">{description}</p>
+        <ul class="flex flex-wrap gap-x-2 gap-y-2 mb-6">
+          {tags.map(tag => (
+            <li>
+              <span class={`flex gap-x-1 items-center text-xs rounded-full text-s ${tag.class} py-1 px-2`}>
+                {tag.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
     </article>
   ))
 }
