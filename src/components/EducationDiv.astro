@@ -1,9 +1,10 @@
 ---
-const { date, title, description } = Astro.props;
+const { date, title, institution, description } = Astro.props;
 ---
 
 
 <div class="absolute w-3 h-3 bg-grape rounded-full mt-1.5 -start-1.5 border border-russian_violet"></div>
 <time class="mb-1 text-sm font-normal leading-none text-palatinate_blue/75">{date}</time>
 <h3 class="text-lg font-semibold text-electric_indigo">{title}</h3>
+<h5>{institution}</h5>
 <p class="break-words mb-4 text-base font-normal text-wisteria">{description}</p>
